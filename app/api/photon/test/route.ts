@@ -4,6 +4,8 @@ import { sendTestMessage, getPhotonStatus } from "@/lib/photon";
 // POST /api/photon/test
 // Sends "Photon test from What Did I Miss?: messaging integration is connected."
 // In demo mode this returns a mock success and logs that demo mode is active.
+export const runtime = "edge";
+
 export async function POST(req: Request) {
   try {
     const body = await req.json().catch(() => ({}));

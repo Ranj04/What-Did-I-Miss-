@@ -6,6 +6,7 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { Badge } from "@/components/ui/Badge";
 
 export const dynamic = "force-dynamic";
+export const runtime = "edge";
 
 const envReference = [
   { group: "Butterbase", vars: ["NEXT_PUBLIC_BUTTERBASE_URL", "BUTTERBASE_API_KEY", "BUTTERBASE_APP_ID", "BUTTERBASE_MODEL_GATEWAY_KEY"] },

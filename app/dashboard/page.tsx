@@ -27,6 +27,7 @@ import { relativeDue, daysUntil, formatDate } from "@/lib/utils";
 import type { Assignment, Course, MemoryEvent } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
+export const runtime = "edge";
 
 export default async function DashboardPage() {
   const [courses, user] = await Promise.all([listCourses("user_demo"), getCurrentUser()]);

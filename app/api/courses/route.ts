@@ -3,6 +3,8 @@ import { createCourse, listCourses } from "@/lib/butterbase";
 
 // GET  /api/courses        — list courses for the demo user
 // POST /api/courses        — create a course
+export const runtime = "edge";
+
 export async function GET() {
   const courses = await listCourses("user_demo");
   return NextResponse.json({ courses });

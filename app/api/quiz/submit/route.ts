@@ -7,6 +7,8 @@ import { writeMemory } from "@/lib/xtrace";
 // POST /api/quiz/submit
 // Pipeline C: grade -> detect weakness -> store attempt (Butterbase)
 //             -> learning-gap memory (XTrace) -> practice nudge (Photon)
+export const runtime = "edge";
+
 export async function POST(req: Request) {
   try {
     const body = await req.json();

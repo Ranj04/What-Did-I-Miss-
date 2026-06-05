@@ -2,6 +2,7 @@ import { CatchUpForm } from "@/components/CatchUpForm";
 import { INTEGRATION_META, INTEGRATION_ORDER } from "@/components/ui/IntegrationBadge";
 
 export const dynamic = "force-dynamic";
+export const runtime = "edge";
 
 export default function CatchUpPage({ params }: { params: { courseId: string } }) {
   return (

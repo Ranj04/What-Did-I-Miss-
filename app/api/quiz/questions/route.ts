@@ -3,6 +3,8 @@ import { getCourse, listMaterials } from "@/lib/butterbase";
 import { runQuizGenerationPipeline } from "@/lib/rocketride";
 
 // GET /api/quiz/questions?courseId=... — RocketRide C generates practice questions.
+export const runtime = "edge";
+
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
   const courseId = searchParams.get("courseId");

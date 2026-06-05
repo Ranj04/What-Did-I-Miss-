@@ -2,6 +2,7 @@ import { getCourseMemories } from "@/lib/xtrace";
 import { MemoryPanel } from "@/components/MemoryPanel";
 
 export const dynamic = "force-dynamic";
+export const runtime = "edge";
 
 export default async function MemoryPage({
   params,

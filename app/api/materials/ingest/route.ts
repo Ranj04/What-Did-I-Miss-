@@ -6,6 +6,8 @@ import type { SourceType } from "@/lib/types";
 
 // POST /api/materials/ingest
 // Pipeline A: parse -> classify -> extract -> store (Butterbase) -> memory (XTrace)
+export const runtime = "edge";
+
 export async function POST(req: Request) {
   try {
     const body = await req.json();

@@ -4,6 +4,7 @@ import { runQuizGenerationPipeline } from "@/lib/rocketride";
 import { PracticeQuestion } from "@/components/PracticeQuestion";
 
 export const dynamic = "force-dynamic";
+export const runtime = "edge";
 
 export default async function PracticePage({
   params,

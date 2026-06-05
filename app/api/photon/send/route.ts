@@ -4,6 +4,8 @@ import type { Platform } from "@/lib/types";
 
 // POST /api/photon/send
 // Body: { userId, courseId, messageText, platform? }
+export const runtime = "edge";
+
 export async function POST(req: Request) {
   try {
     const body = await req.json();

@@ -5,6 +5,7 @@ import { PhotonStatusPanel } from "@/components/PhotonStatusPanel";
 import { MessageActions } from "@/components/MessageActions";
 
 export const dynamic = "force-dynamic";
+export const runtime = "edge";
 
 export default async function MessagesPage({
   params,

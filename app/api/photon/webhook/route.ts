@@ -7,6 +7,8 @@ import { sendMessage } from "@/lib/photon";
 // POST /api/photon/webhook
 // Inbound message from the messaging platform. Stores it, then generates and
 // sends a memory-aware reply (RocketRide E + XTrace recall + Photon send).
+export const runtime = "edge";
+
 export async function POST(req: Request) {
   try {
     const payload = await req.json();

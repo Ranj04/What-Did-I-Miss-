@@ -6,6 +6,8 @@ import { runPhotonReplyPipeline } from "@/lib/rocketride";
 // Body: { query, courseId, userId?, reply? }
 // Searches XTrace; when reply=true, also returns a memory-aware answer
 // (RocketRide E) — this powers "Explain the chat connection part."
+export const runtime = "edge";
+
 export async function POST(req: Request) {
   try {
     const body = await req.json();

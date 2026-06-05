@@ -4,6 +4,8 @@ import { supersedeMemory, writeMemory } from "@/lib/xtrace";
 // POST /api/memory/write
 // Body (write):     { userId, courseId, memoryText, memoryType, source }
 // Body (supersede): { supersedesMemoryId, userId, courseId, memoryText, memoryType, source }
+export const runtime = "edge";
+
 export async function POST(req: Request) {
   try {
     const body = await req.json();

@@ -5,6 +5,7 @@ import { CourseTabs } from "@/components/CourseTabs";
 import { CourseWorkspaceHeader } from "@/components/CourseWorkspaceHeader";
 
 export const dynamic = "force-dynamic";
+export const runtime = "edge";
 
 export default async function CourseLayout({
   children,

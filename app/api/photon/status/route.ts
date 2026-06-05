@@ -4,6 +4,8 @@ import { listPhotonMessages } from "@/lib/butterbase";
 
 // GET /api/photon/status?courseId=...
 // Returns Photon connectivity + the last logged message status.
+export const runtime = "edge";
+
 export async function GET(req: Request) {
   try {
     const { searchParams } = new URL(req.url);

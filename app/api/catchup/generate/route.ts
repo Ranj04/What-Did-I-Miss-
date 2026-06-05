@@ -4,6 +4,8 @@ import { runCatchUpAgent } from "@/lib/agents";
 // POST /api/catchup/generate
 // Body: { userId, courseId, question, missedStartDate, missedEndDate }
 // Runs the multi-tool catch-up agent (Butterbase + XTrace + RocketRide + Photon).
+export const runtime = "edge";
+
 export async function POST(req: Request) {
   try {
     const body = await req.json();

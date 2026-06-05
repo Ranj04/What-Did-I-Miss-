@@ -6,6 +6,8 @@ import { seedDemoLive } from "@/lib/seed";
 
 // POST /api/demo/reset — restore the seeded CSC 413 demo state.
 // LIVE: wipes + reseeds the demo course in Butterbase. DEMO: resets the store.
+export const runtime = "edge";
+
 export async function POST() {
   if (isLive()) {
     const { courseId } = await seedDemoLive();

@@ -12,6 +12,7 @@ import { EmptyState } from "@/components/ui/EmptyState";
 import { Badge } from "@/components/ui/Badge";
 
 export const dynamic = "force-dynamic";
+export const runtime = "edge";
 
 export default async function CourseOverviewPage({
   params,
