@@ -202,6 +202,24 @@ Reset anytime with **Reset demo** (dashboard) or `POST /api/demo/reset`.
 
 ---
 
+## Deployment
+
+The app is a standard Next.js 14 App Router project and every route/page declares
+`runtime = "edge"`, so it deploys to edge platforms cleanly.
+
+1. **Butterbase Edge SSR (primary).** The backend already lives on Butterbase
+   (`app_2tcinxzld4o0`). Deploy the frontend through the Butterbase MCP /
+   dashboard Edge SSR (Cloudflare) path; the live `BUTTERBASE_*` keys are already
+   configured server-side. No extra env is required for the demo — the other three
+   integrations run in demo mode until their keys are added.
+2. **Vercel (backup).** `vercel --prod` works out of the box (framework auto-detected
+   as Next.js). In the Vercel dashboard add the same variables from `.env.example`
+   you want live (at minimum the `BUTTERBASE_*` keys to keep the backend live).
+3. **Any Node host.** `npm run build && npm start` serves the production build.
+
+Before any deploy: `npm run build` (passes), confirm demo mode works with no keys,
+and confirm `.env.local` is **not** committed (it's git-ignored).
+
 ## Submission
 
 This project targets the **Agentic AI SF Hackathon** (hackathon slug `agentic-ai-Hackathon`).
