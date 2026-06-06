@@ -12,6 +12,12 @@ import { CatchUpPreviewCard } from "@/components/CatchUpPreviewCard";
 import { INTEGRATION_META, INTEGRATION_ORDER } from "@/components/ui/IntegrationBadge";
 import { DEMO_COURSE_ID } from "@/lib/demoData";
 
+// Render on the edge like every other page so the bare "/" route is served by
+// the worker (a prerendered "/" 404s on the Edge SSR host — only /index.html
+// resolves). Keeps the landing page reachable at the root URL.
+export const dynamic = "force-dynamic";
+export const runtime = "edge";
+
 const steps = [
   {
     icon: <FileSearch className="h-5 w-5" />,
